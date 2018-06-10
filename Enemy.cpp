@@ -1,16 +1,12 @@
 #include "Enemy.hpp"
 
 Enemy::Enemy(WINDOW * win, char ch) : Entity(win, 0, 0, ch) {
-    LocX = (rand() % xMax) + 2;
-    LocY = 1;
+    LocX = (rand() % xMax - 2) + 2;
+    LocY = yMax / 2;
 }
 
 Enemy::~Enemy() {
 
-}
-
-void    Enemy::setWindow(WINDOW  * win) {
-    this->_win = win;
 }
 
 void    Enemy::setPosition(int x, int y) {
